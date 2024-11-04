@@ -1,0 +1,110 @@
+1. Basic Command Execution
+
+Description: Execute a simple command
+Input: /bin/ls
+Expected Output: List of files and directories in the current working directory.
+Result: PASS
+
+2. Command with Arguments
+
+Description: Execute a command with arguments
+Input: /bin/ls -al
+Expected Output: Detailed list of files and directories, including hidden ones.
+Result: PASS
+
+3. Piping Commands
+
+Description: Test command piping
+Input: /bin/ps | /bin/grep bash
+Expected Output: List of bash processes running.
+Result: PASS
+
+4. Long Command Piping
+
+Description: Test multiple piped commands
+Input: /usr/bin/cat dirlist.txt | /usr/bin/grep "word" | /usr/bin/wc -l
+Expected Output: The number of lines in dirlist.txt that contain the word "word".
+Result: PASS
+
+5. Background Job Execution
+
+Description: Execute a command in the background
+Input: /bin/sleep 5 &
+Expected Output: PID of the background process.
+Result: PASS
+
+6. Output Redirection
+
+Description: Test output redirection
+Input: /bin/ls > output.txt
+Expected Output: The file output.txt should contain the output of ls.
+Result: PASS
+
+7. Input Redirection
+
+Description: Test input redirection
+Input: /usr/bin/sort < output.txt
+Expected Output: Sorted contents of file.txt displayed.
+Result: PASS
+
+8. Combined Input and Output Redirection
+
+Description: Test combined input and output redirection
+Input: /usr/bin/wc -w < output.txt > wordcount.txt
+Expected Output: The file wordcount.txt should contain the number of words from dirlist.txt
+Result: PASS
+
+9. Error Handling - Invalid Command
+
+Description: Execute an invalid command
+Input: /usr/bin/invalid_command
+Expected Output: Error message indicating program failed to execute.
+Result: PASS
+
+10. Error Handling - Pipe Failure
+
+Description: Execute a command with an invalid pipe.
+Input: /bin/cat non_existent_file | /usr/bin/sort
+Expected Output: Error message indicating that the file does not exist.
+Result: PASS
+
+11. Handling Signals
+
+Description: Test how the shell handles interrupt signals (i.e. Ctrl+C).
+Input: Run /bin/sleep 100 a and interrupt with Ctrl+C.
+Expected Output: The command is terminated, and the shell returns to the prompt.
+Result: PASS
+
+12. Memory Management
+
+Description: Check for memory leaks during command execution.
+Input: Execute various commands repeatedly.
+Expected Output: No memory leaks detected.
+Result: PASS
+
+13. Two-Stage Command with Output Redirection
+
+Description: Test a two-stage command with output redirection
+Input: /usr/bin/ls -al | /usr/bin/wc -l > dirlistlen.txt
+Expected Output: The file dirlistlen.txt should contain the count of files and directories in the current directory.
+Result: PASS
+
+14. Two-Stage Command with Output Redirection and Background Execution
+
+Description: Test a two-stage command with output redirection and background execution.
+Input: /usr/bin/ls -al /usr/bin | /usr/bin/wc -l > dirlistlen.txt &
+Expected Output:
+    -The command should execute in the background without blocking the shell.
+    -The file dirlistlen.txt should contain the count of files and directories in /usr/bin.
+    -The shell should print the PID of the background job.
+Result: PASS
+
+15. Command with Input and Output Redirection in Background
+
+Description: Test a command with input redirection, output redirection, and background execution.
+Input: /usr/bin/wc -w < output.txt > wordcount.txt &
+Expected Output:
+    -The command should execute in the background without blocking the shell.
+    -The file wordcount.txt should contain the word count of the contents of dirlist.txt.
+    -The shell should print the job number and PID of the background job.
+Result: PASS

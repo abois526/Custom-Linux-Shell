@@ -1,0 +1,41 @@
+/*-------- FOR C LANGUAGE FILES ----------------------------------------------/*
+
+/*---------- ID HEADER -------------------------------------
+/  Author(s):   Andrew Boisvert, Kyle Scidmore
+/  Email(s):    abois526@mtroyal.ca, kscid125@mtroyal.ca
+/  File Name:   TODO
+/
+/  Program Purpose(s):
+/    TODO
+/---------------------------------------------------------*/
+
+
+/*---------- FUNCTION: TODO --------------------------------
+/  PURPOSE:
+/    TODO - purpose from the caller's perspective 
+/  
+/  CALLER INPUT:
+/    TODO - purpose of input parameters 
+/  
+/  CALLER OUTPUT:
+/    TODO - purpose of output parameters and return vals
+/  
+/  ASSUMPTIONS, LIMITATIONS, AND KNOWN BUGS:
+/    TODO - N/A or list them 
+/---------------------------------------------------------*/
+
+
+/*---------- STRUCTURE: TODO -------------------------------
+/  INFO:
+/    TODO - general explanation 
+/  
+/  ATTRIBUTES:
+/    TODO - list details about the attributes 
+/---------------------------------------------------------*/
+
+
+
+
+/*-------- FOR ASSEMBLY FILES ------------------------------------------------/*
+
+TODO, need to check syntax for comments, then just edit the C file ones to work 

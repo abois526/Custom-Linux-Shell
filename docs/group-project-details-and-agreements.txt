@@ -1,0 +1,168 @@
+Group Project Details and Agreements 
+==========
+
+Sections:
+    1. Code and Documentation Standards 
+    2. Project Governance, Management, and Labour
+    3. Project Afterthoughts
+
+
+1. Code and Documentation Standards 
+-----
+- Indentation Style:
+    - decided upon using the One True Brace style (like K&R but excludes 
+    single-statement code blocks for ease of modification)
+    e.g. 
+        while (x == y) {
+            if (true) {
+                foo();
+            } else {
+                bar();
+            }
+        }
+
+- variables will be named using snake case 
+    e.g. foo_bar
+
+- lines must not exceed 80 characters in length 
+
+- avoid magic numbers and create macros as needed to define constant values 
+with clear descriptions 
+    e.g. #define MAX_PIPELINE_LEN 10 
+
+- must include one blank space between operators to aid in legibility 
+(excluding the arrow operator which is used to access members of structs), 
+using parenthesis for clarity on order of operations 
+    e.g. (12 * 3) + 7
+
+- organization of code must be as follows:
+    - inside .c files 
+        #include <> (pre-existing header files)
+        #include "" (user-defined header files)
+        #defines
+        Globals (if strictly necessary) 
+        Code (w/ main function first)
+    - inside .h files 
+        #ifndef [FILENAME]_H
+        #define [FILENAME]_H
+        #include <> (pre-existing header files)
+        #include "" (user-defined header files)
+        #defines 
+        Structs 
+        Function Prototypes
+        #endif 
+
+- code must be documented using the templates found in comment-templates 
+    - this documentation has been decided upon as it is similar to that of 
+    our previous classes, with some slight modifications for personal project 
+    use i.e. reference list etc 
+
+- when accessing members of a struct use the arrow operator instead of 
+dereferencing 
+    i.e. access members with struct->member, not with (*struct).member 
+
+- strings to be written should generally be defined by macros to aid in 
+legibility and management of string length 
+
+
+2. Project Governance, Management, and Labour 
+----------
+Governance:
+- Goals and Accountability:
+    - We would like to get as far as possible, adding some of the additional 
+    functionality if time permits.
+    - We are targeting an A- grade on the project.
+    - As we are a group of 2, each member will be responsible for an equal 
+    distribution of labour.
+- Policy: 
+    - Members are expected to meet as a group at minimum weekly and will be 
+    expected to manage individual contribution in their own time.
+    - Communication will occur every 1-2 days.
+    - Work will be conducted both individually and in group work sessions, 
+    depending on members availability which will be discussed on an ongoing 
+    basis.
+    - If members have familial obligations over reading break, they are to 
+    prioritize time with their families, but they will be expected to spend 
+    some of their free time completing the project if we have decided to 
+    continue working on it before the reading break.
+    - Group issues and conflicts will be solved through regular communication. 
+    As we have known each other for a couple of years now and regularly 
+    communicate, we know each other well enough that we should feel comfortable 
+    bringing any issues and concerns to one another. Should the need arise, 
+    these issues will be respectfully discussed and a resolution will be agreed 
+    upon. 
+    - Code and documentation standards will follow a similar pattern to that 
+    of our previous classes, with some slight revisions. Any interesting 
+    ideas that we find from other coding standards will be shared with members.
+    A design guide, as well as documentation templates, will be available to 
+    members. 
+- Team Lead: 
+    - As we have two members, no team lead will be exist. Any group decisions 
+    will be discussed, and we will be following the "two yes, one no" rule 
+    where both members must agree to any major decisions, group standards, etc. 
+
+Management and Labour:
+- Planning: 
+    - Planning to meet the initial deadline, but will work into reading break 
+    if necessary, or if we wish to try to implement additional features.
+    - Tools: 
+        - VS Code w/ Remote Explorer and Live Share extensions to facilitate 
+        paired programming sessions 
+        - GitHub for version control 
+        - Discord for voice chats during group sessions 
+        - Text messaging and in-person meetings for all other communication. 
+- Group Decisions: 
+    - For all architectural choices beyond that specified in the project 
+    guidance documents, discussions will take place to come to a final 
+    decision. Members are permitted to make initial decisions regarding things
+     such as module organization, but they are to communicate such to the other
+      member and come to a final decision together. 
+- Allocation of Resources: 
+    - Division of labour will be planned to be equal, overall. Discussions will
+     take place to decide how we will split the work, considering member's 
+     strengths and weaknesses. As we are both older students, we will keep an 
+     open line of communication with each other regarding personal 
+     responsibilities and changes to our schedules so we may have discussions 
+     regarding re-division of labour if necessary, but we are expected to take
+      that into consideration going forward to ensure equal participation. 
+- Integration and Review: 
+    - Individuals are expected to write high-quality code which they have 
+    properly tested. They are expected to explain their code to the other 
+    member during weekly code reviews to help the other member to understand
+    their contributions, as well as to help catch bugs and errors. All code 
+    will be reviewed before moving onto further sections. 
+- Other Labour Tasks: 
+    - Mutual-Education:
+        - Both members will be expected to fully understand the solutions 
+        found within the project. Code reviews and explanations will help to 
+        facilitate this. 
+    - Presentation Development: 
+        - Members will keep the presentation in mind throughout the course of
+        the project, personally documenting anything relevant and sharing ideas
+         on the overall presentation with the other member. Upon completion, we
+          will begin to create and organize the presentation itself, utilizing 
+          some of the resources which we have compiled over the course of the 
+          project's completion.
+
+3. Project Afterthoughts
+----------
+
+Evidence of our regular group meetings and development activity is available 
+through: observation of our in-class conversations and communication, version
+control history, text messages, discord call history, etc. Some of this is 
+not readily available, and our github repo has been made private to maintain
+academic integrity, but we are happy to review any of this supporting 
+documentation with you. 
+
+Group policies and development timeline were approximately met. Although we 
+had wished we had gotten a bit further and had a chance to experiment with 
+additional shell functionality, we feel like we generally met our goal for 
+the project. The only main goal which we feel we failed was the 
+implementation of the search. We got the linear search module working in 
+testing, but we were having issues with segmentation faults and core dumps
+when trying to implement it into our other modules. We spent a considerable 
+amount of time troubleshooting this, and unfortunately, were unable to come 
+up with a result. We felt that implementing a hash table would have been 
+relatively simple once we got the linear search implemented into the rest of
+the program, so we decided to focus on that last, and ran out of time to do
+so.
