@@ -32,10 +32,3 @@
 /  ATTRIBUTES:
 /    TODO - list details about the attributes 
 /---------------------------------------------------------*/
-
-
-
-
-/*-------- FOR ASSEMBLY FILES ------------------------------------------------/*
-
-TODO, need to check syntax for comments, then just edit the C file ones to work 
